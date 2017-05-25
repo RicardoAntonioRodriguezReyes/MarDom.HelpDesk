@@ -49,9 +49,9 @@ namespace MarDom.Web.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "UserName")]
+        //[EmailAddress]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,10 +64,28 @@ namespace MarDom.Web.Models
 
     public class RegisterViewModel
     {
+
         [Required]
-        [EmailAddress]
+        //[EmailAddress]
+        [Display(Name = "Nombres")]
+        public string Nombres { get; set; }
+
+        [Required]
+        //[EmailAddress]
+        [Display(Name = "Apellidos")]
+        public string Apellidos { get; set; }
+
+
+        [Required]
+        //[EmailAddress]
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
+
+        [Required]
         [Display(Name = "Email")]
+        //[EmailAddress]
         public string Email { get; set; }
+
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

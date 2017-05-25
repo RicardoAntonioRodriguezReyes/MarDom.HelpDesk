@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace MarDom.Web.Models
+namespace  MarDom.Web.Models
 {
     public class IndexViewModel
     {
