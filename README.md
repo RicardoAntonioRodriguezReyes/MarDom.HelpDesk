@@ -29,4 +29,14 @@ presentación al modelo de pantalla realizado:
 
 #### B).-Pantalla de Modificar asignar y cerrar tickets
 ![2](https://cloud.githubusercontent.com/assets/11558655/26476761/ce74d8c6-418e-11e7-9aa0-16b5ed6828fe.PNG)
+- Deberá permitir anexar documento o imágenes en caso del usuario necesitarlo.
 
+5.- Cada formulario utilizado debe hacer uso de las validaciones de sus campos ya sea
+Utilizando JavaScript (mostrando todos los errores de una sola vez de manera
+elegante), HTML 5 o desde el servidor.
+
+6.-Presentar a través del dashboard y según grafico las siguientes consultas:
+- Histórico de solicitudes, todas o por rango de fecha
+- Lista de solicitudes por rango de fecha, tipo de solicitudes, asignadas, por departamento
+- Tiempo de gestión de las solicitudes.
+- Cantidad de solicitudes cerradas
