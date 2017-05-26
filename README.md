@@ -22,3 +22,6 @@ de entrada realizadas por el usuario .
 
 3.-El sistema deberá permitir Agregar y modificar solicitudes de soporte y en la cual le
 permita realizar opción de cierre y asignaciones
+
+A)-Pantalla de insertar:
+
