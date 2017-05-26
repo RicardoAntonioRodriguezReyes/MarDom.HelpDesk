@@ -24,11 +24,11 @@
             </li>
      
 
-            <li class="@Html.IsSelected(controller: "Retail")">
-                <a href="@Url.Action("Upload", "Retail")"><i class="fa fa-folder-open"></i> <span class="nav-label" data-i18n="nav.dashboard">Solicitudes</span> <span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Retail", cssClass: "in")">
-                    <li class="@Html.IsSelected(action: "Upload")"><a href="@Url.Action("Upload", "Retail")">Crear solicitud</a></li>
-                    <li class="@Html.IsSelected(action: "ValidityRetail")"><a href="@Url.Action("ValidityRetail", "Retail")">Solicitud</a></li>
+            <li class="@Html.IsSelected(controller: "Ticket")">
+                <a href="@Url.Action("Index", "Ticket")"><i class="fa fa-ticket"></i> <span class="nav-label" data-i18n="nav.dashboard">Ticket</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Ticket", cssClass: "in")">
+                    <li class="@Html.IsSelected(action: "Crear")"><a href="@Url.Action("Crear", "Ticket")">Crear solicitud</a></li>
+                    <li class="@Html.IsSelected(action: "ValidityRetail")"><a href="@Url.Action("ValidityRetail", "Ticket")">Tickets</a></li>
                 </ul>
             </li>
             <li class="@Html.IsSelected(controller: "Report")">

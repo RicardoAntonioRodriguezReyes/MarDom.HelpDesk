@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "Crear";
+}
+
+@*<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Ticket</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Ticket</a>
+            </li>
+            <li class="active">
+                <strong>Crear</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>*@
+
+
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <form role="form" class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputEmail2" class="sr-only">Empresa</label>
+                <input type="text" placeholder="Empresa" id="Empresa" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword2" class="sr-only">Usuario</label>
+                <input type="text" placeholder="Usuario" id="Usuario" class="form-control">
+            </div>
+
+            <button class="btn btn-white" type="submit">Buscar usuario</button>
+            <button class="btn btn-primary pull-right" type="submit">Nuevo Cliente</button>
+        </form>
+    </div>
+</div>
+<div class="ibox-content">
+    <form method="get" class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Registro para : </label>
+
+            <div class="col-sm-10"><input type="text" disabled="disabled" placeholder="Ricardo Rodriguez" class="form-control"></div>
+        </div>
+        <div class="hr-line-dashed"></div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Organizacion</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" disabled="disabled" placeholder="Maritima Dominicana"> 
+            </div>
+        </div>
+     
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Seleccione objeto</label>
+
+            <div class="col-sm-10">
+                <select class="form-control m-b" name="account">
+                    <option>Error en sistema</option>
+                   
+                </select>
+                <span class="help-block m-b-none">Seleccione el tipo de solicitud que decea registrar</span>
+             
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Titulo de solicitud</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  placeholder="Error en sistema NAV"> 
+
+            
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Descripcion de solicitud:</label>
+
+            <div class="col-sm-10">
+              
+
+                <textarea class="form-control" rows="8" id="comment"></textarea>
+
+            </div>
+        </div>
+       
+        <div class="hr-line-dashed"></div>
+        <div class="form-group">
+            <div class="col-sm-4 col-sm-offset-2">
+                <button class="btn btn-white" type="submit">Cancelar</button>
+                <button class="btn btn-primary" type="submit">Crear</button>
+            </div>
+        </div>
+            </div>
+    
