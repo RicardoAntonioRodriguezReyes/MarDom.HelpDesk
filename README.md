@@ -24,4 +24,6 @@ de entrada realizadas por el usuario .
 permita realizar opción de cierre y asignaciones
 
 A)-Pantalla de insertar:
+![1](https://cloud.githubusercontent.com/assets/11558655/26476721/947b9da8-418e-11e7-8b09-ba21e117430c.PNG)
+
 
