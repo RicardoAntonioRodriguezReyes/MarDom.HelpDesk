@@ -24,9 +24,9 @@ de entrada realizadas por el usuario .
 permita realizar opción de cierre y asignaciones a los tickets registrados, según
 presentación al modelo de pantalla realizado:
 
-### A).-Pantalla de insertar:
+#### A).-Pantalla de insertar:
 ![1](https://cloud.githubusercontent.com/assets/11558655/26476721/947b9da8-418e-11e7-8b09-ba21e117430c.PNG)
 
-### B).-Pantalla de Modificar asignar y cerrar tickets
+#### B).-Pantalla de Modificar asignar y cerrar tickets
 ![2](https://cloud.githubusercontent.com/assets/11558655/26476761/ce74d8c6-418e-11e7-9aa0-16b5ed6828fe.PNG)
 
