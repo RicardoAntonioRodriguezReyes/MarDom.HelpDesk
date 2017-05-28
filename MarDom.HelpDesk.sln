@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarDom.Web", "MarDom.Web\MarDom.Web.csproj", "{71756394-3341-48C0-8DA2-592B37434526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarDom.Data", "MarDom.Data\MarDom.Data.csproj", "{6CB8815F-A28A-4C21-A2B9-481AB4153244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarDom.Services", "MarDom.Services\MarDom.Services.csproj", "{F9F25F72-49C0-4201-B844-CD9ED343D24F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{71756394-3341-48C0-8DA2-592B37434526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71756394-3341-48C0-8DA2-592B37434526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71756394-3341-48C0-8DA2-592B37434526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB8815F-A28A-4C21-A2B9-481AB4153244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB8815F-A28A-4C21-A2B9-481AB4153244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB8815F-A28A-4C21-A2B9-481AB4153244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB8815F-A28A-4C21-A2B9-481AB4153244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F25F72-49C0-4201-B844-CD9ED343D24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F25F72-49C0-4201-B844-CD9ED343D24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F25F72-49C0-4201-B844-CD9ED343D24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F25F72-49C0-4201-B844-CD9ED343D24F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
