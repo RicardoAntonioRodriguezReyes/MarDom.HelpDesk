@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="Retail">
+<html ng-app="Mardom.HelpDesk">
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -114,25 +114,21 @@
 
     <!-- Skin config script - only for demo purpose-->
     @Scripts.Render("~/bundles/skinConfig")
-    @*<script src="~/Scripts/plugins/angular/angular.min.js"></script>*@
-    @*<script src="~/Scripts/plugins/angular/angular-route.min.js"></script>
-    <script src="~/Scripts/plugins/angular/ui-router/angular-ui-router.min.js"></script>*@
-    @*@Styles.Render("~/Content/plugins/dataTables/dataTablesStyles")*@
-    <script src="~/Scripts/plugins/console-sham.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css" />  
+   
+
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
  
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-touch.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
-    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
-    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
-    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
-    <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
-    <script src="https://rawgithub.com/PascalPrecht/bower-angular-translate/master/angular-translate.min.js"></script>
-    @Scripts.Render("~/plugins/chartjs")
-    <script src="~/Scripts/plugins/angular-chart/angular-chart.min.js"></script>
 
+    @Scripts.Render("~/plugins/chartjs")
+    <script src="~/Scripts/autocomplete/autocomplete.js"></script>
+    <script src="~/Scripts/plugins/angular-chart/angular-chart.min.js"></script>
     <script src="~/js/app.js"></script>
+    <script src="~/js/Services/TicketService.js"></script>
+    <script src="~/js/Services/UsuarioService.js"></script>
+    <script src="~/js/Directivas/autocomplete.js"></script>
+
+    <script src="~/js/Controllers/DashboardController.js"></script>
+    <script src="~/js/Controllers/TicketController.js"></script>
     <!-- Handler for local scripts -->
     @RenderSection("scripts", required: false)
 

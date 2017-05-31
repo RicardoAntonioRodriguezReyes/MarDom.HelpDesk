@@ -31,13 +31,13 @@
                     <li class="@Html.IsSelected(action: "ValidityRetail")"><a href="@Url.Action("ValidityRetail", "Ticket")">Tickets</a></li>
                 </ul>
             </li>
-            <li class="@Html.IsSelected(controller: "Report")">
-                <a href="@Url.Action("Index", "Report")"><i class="fa fa-line-chart"></i> <span class="nav-label" data-i18n="nav.dashboard">Informes</span> <span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Report", cssClass: "in")">
-                    <li class="@Html.IsSelected(action: "Earnings")"><a href="@Url.Action("Earnings", "Report")">Histórico de solicitudes</a></li>
-                    <li class="@Html.IsSelected(action: "Earnings")"><a href="@Url.Action("Earnings", "Report")">Solicitudes por parametros</a></li>
-                    <li class="@Html.IsSelected(action: "Sales")"><a href="@Url.Action("Sales", "Report")">Tiempo de gestión de las solicitudes</a></li>
-                    <li class="@Html.IsSelected(action: "Sales")"><a href="@Url.Action("Sales", "Report")">Solicitudes cerradas</a></li>
+            <li class="@Html.IsSelected(controller: "Dashboard")">
+                <a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-line-chart"></i> <span class="nav-label" data-i18n="nav.dashboard">Dashboards</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Dashboard", cssClass: "in")">
+                    <li class="@Html.IsSelected(action: "HistoricoSolicitudes")"><a href="@Url.Action("HistoricoSolicitudes", "Dashboard")">Histórico de solicitudes</a></li>
+                    <li class="@Html.IsSelected(action: "Earnings")"><a href="@Url.Action("Earnings", "Dashboard")">Solicitudes por parametros</a></li>
+                    <li class="@Html.IsSelected(action: "Sales")"><a href="@Url.Action("Sales", "Dashboard")">Tiempo de gestión de las solicitudes</a></li>
+                    <li class="@Html.IsSelected(action: "Sales")"><a href="@Url.Action("Sales", "Dashboard")">Solicitudes cerradas</a></li>
                 </ul>
             </li>
            

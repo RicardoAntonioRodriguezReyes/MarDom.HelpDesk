@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MarDom.Web.Models;
+using MarDom.Services.Servicios.Administracion;
 
 namespace MarDom.Web.Controllers
 {
@@ -51,6 +52,24 @@ namespace MarDom.Web.Controllers
                 _userManager = value;
             }
         }
+
+        #region HelpDesk Api
+        [HttpGet]
+        [AllowAnonymous]
+        public JsonResult OptenerUsuarios()
+        {
+            UsuarioService servicio = new UsuarioService();
+
+            return Json(servicio.ObtenerUsuarios().Data, JsonRequestBehavior.AllowGet);
+        }
+
+        #endregion
+
+
+
+
+
+
 
         //
         // GET: /Account/Login
@@ -342,6 +361,9 @@ namespace MarDom.Web.Controllers
                     return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
             }
         }
+       
+
+
 
         //
         // POST: /Account/ExternalLoginConfirmation

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarDom.Data", "MarDom.Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarDom.Services", "MarDom.Services\MarDom.Services.csproj", "{F9F25F72-49C0-4201-B844-CD9ED343D24F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarDom.Test", "MarDom.Test\MarDom.Test.csproj", "{FAA62E2A-93C8-4D6B-83ED-A3BA9FAEAE73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F9F25F72-49C0-4201-B844-CD9ED343D24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F25F72-49C0-4201-B844-CD9ED343D24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F25F72-49C0-4201-B844-CD9ED343D24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA62E2A-93C8-4D6B-83ED-A3BA9FAEAE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA62E2A-93C8-4D6B-83ED-A3BA9FAEAE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA62E2A-93C8-4D6B-83ED-A3BA9FAEAE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA62E2A-93C8-4D6B-83ED-A3BA9FAEAE73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

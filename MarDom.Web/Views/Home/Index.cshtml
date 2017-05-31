@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<div class="wrapper wrapper-content animated fadeInRight">
+<div class="wrapper wrapper-content animated fadeInRight" ng-controller="TicketController">
 
     <div class="row">
         <div class="col-lg-2">
@@ -78,5 +78,75 @@
         </div>
     </div>
 
+    <div class="row">
 
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h3>Tickects</h3>
+                    <p class="small"><i class="fa fa-hand-o-up"></i> Drag task between list</p>
+                    <ul class="sortable-list connectList agile-list ui-sortable" id="completed">
+                        <li class="info-element ui-sortable-handle" id="task16">
+                            Sometimes by accident, sometimes on purpose (injected humour and the like).
+                            <div class="agile-detail">
+                                <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                                <i class="fa fa-clock-o"></i> 16.11.2015
+                            </div>
+                        </li>
+                        <li class="warning-element ui-sortable-handle" id="task17">
+                            Ut porttitor augue non sapien mollis accumsan.
+                            Nulla non elit eget lacus elementum viverra.
+                            <div class="agile-detail">
+                                <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                                <i class="fa fa-clock-o"></i> 09.12.2015
+                            </div>
+                        </li>
+                        <li class="warning-element ui-sortable-handle" id="task18">
+                            Which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                            <div class="agile-detail">
+                                <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                                <i class="fa fa-clock-o"></i> 09.12.2015
+                            </div>
+                        </li>
+                        <li class="warning-element ui-sortable-handle" id="task19">
+                            Packages and web page editors now use Lorem Ipsum as
+                            <div class="agile-detail">
+                                <a href="#" class="pull-right btn btn-xs btn-primary">Done</a>
+                                <i class="fa fa-clock-o"></i> 08.04.2015
+                            </div>
+                        </li>
+                        <li class="success-element ui-sortable-handle" id="task20">
+                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+                            <div class="agile-detail">
+                                <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                                <i class="fa fa-clock-o"></i> 05.04.2015
+                            </div>
+                        </li>
+                        <li class="info-element ui-sortable-handle" id="task21">
+                            Sometimes by accident, sometimes on purpose (injected humour and the like).
+                            <div class="agile-detail">
+                                <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                                <i class="fa fa-clock-o"></i> 16.11.2015
+                            </div>
+                        </li>
+                        <li class="warning-element ui-sortable-handle" id="task22">
+                            Simply dummy text of the printing and typesetting industry.
+                            <div class="agile-detail">
+                                <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                                <i class="fa fa-clock-o"></i> 12.10.2015
+                            </div>
+                        </li>
+                        <li class="success-element ui-sortable-handle" id="task23">
+                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+                            <div class="agile-detail">
+                                <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                                <i class="fa fa-clock-o"></i> 05.04.2015
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>

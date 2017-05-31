@@ -6,11 +6,11 @@ using System.Web.Mvc;
 
 namespace MarDom.Web.Controllers
 {
-    public class InformeController : Controller
+    public class DashboardController : Controller
     {
         [Authorize]
         // GET: Informe
-        public ActionResult Index()
+        public ActionResult HistoricoSolicitudes()
         {
             return View();
         }

@@ -79,13 +79,26 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -190,14 +203,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\TicketController.cs" />
+    <Compile Include="Api\UsuarioController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InformeController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Global.asax.cs">
@@ -226,6 +242,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animate.css" />
+    <Content Include="Content\autocomplete\autocomplete.css" />
+    <Content Include="Content\autocomplete\style.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\email.css" />
@@ -342,16 +360,21 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\LoaderIcon.gif" />
     <Content Include="img\MaritimaDominicana.png" />
     <Content Include="js\app.js" />
-    <Content Include="js\Controllers\ApplicationUserController.js" />
     <Content Include="js\Controllers\DashboardController.js" />
-    <Content Include="js\Controllers\RetailController.js" />
-    <Content Include="js\Services\RetailService.js" />
-    <Content Include="js\Services\UploadManager.js" />
-    <Content Include="js\Services\UserService.js" />
+    <Content Include="js\Controllers\TicketController.js" />
+    <Content Include="js\Controllers\UsuarioController.js" />
+    <Content Include="js\Directivas\autocomplete.js" />
+    <Content Include="js\Services\TicketService.js" />
+    <Content Include="js\Services\UsuarioService.js" />
     <Content Include="Scripts\app\inspinia.js" />
     <Content Include="Scripts\app\skin.config.min.js" />
+    <Content Include="Scripts\autocomplete\app.js" />
+    <Content Include="Scripts\autocomplete\autocomplete.css" />
+    <Content Include="Scripts\autocomplete\autocomplete.js" />
+    <Content Include="Scripts\autocomplete\style.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -617,6 +640,12 @@
     <Content Include="Scripts\plugins\dotdotdot\jquery.dotdotdot.min.js" />
     <Content Include="Scripts\plugins\dropzone\dropzone.js" />
     <Content Include="Scripts\plugins\dualListbox\jquery.bootstrap-duallistbox.js" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\easy-autocomplete.css" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\easy-autocomplete.min.css" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\easy-autocomplete.themes.css" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\easy-autocomplete.themes.min.css" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\jquery.easy-autocomplete.js" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\jquery.easy-autocomplete.min.js" />
     <Content Include="Scripts\plugins\easypiechart\easypiechart.js" />
     <Content Include="Scripts\plugins\easypiechart\jquery.easypiechart.js" />
     <Content Include="Scripts\plugins\flot\curvedLines.js" />
@@ -803,11 +832,16 @@
     <Content Include="Views\Ticket\Crear.cshtml" />
     <Content Include="Views\Ticket\Index.cshtml" />
     <Content Include="Views\Ticket\Solicitud.cshtml" />
+    <Content Include="Views\Dashboard\HistoricoSolicitudes.cshtml" />
+    <Content Include="Views\Ticket\Editar.cshtml" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\maps\easy-autocomplete.css.map" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\maps\easy-autocomplete.min.css.map" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\maps\easy-autocomplete.themes.css.map" />
+    <Content Include="Scripts\plugins\EasyAutocomplete-1.3.5\maps\easy-autocomplete.themes.min.css.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="fonts\font-awesome\" />
-    <Folder Include="Views\Informe\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -827,6 +861,16 @@
     <EmbeddedResource Include="Migrations\201705250356032_ConfiguracionUsuario1.resx">
       <DependentUpon>201705250356032_ConfiguracionUsuario1.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarDom.Data\MarDom.Data.csproj">
+      <Project>{6CB8815F-A28A-4C21-A2B9-481AB4153244}</Project>
+      <Name>MarDom.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarDom.Services\MarDom.Services.csproj">
+      <Project>{f9f25f72-49c0-4201-b844-cd9ed343d24f}</Project>
+      <Name>MarDom.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
