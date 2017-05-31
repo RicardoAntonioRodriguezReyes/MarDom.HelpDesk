@@ -232,6 +232,10 @@
     <Compile Include="Migrations\201705250356032_ConfiguracionUsuario1.Designer.cs">
       <DependentUpon>201705250356032_ConfiguracionUsuario1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705310349524_Empresa.cs" />
+    <Compile Include="Migrations\201705310349524_Empresa.Designer.cs">
+      <DependentUpon>201705310349524_Empresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -860,6 +864,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705250356032_ConfiguracionUsuario1.resx">
       <DependentUpon>201705250356032_ConfiguracionUsuario1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705310349524_Empresa.resx">
+      <DependentUpon>201705310349524_Empresa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

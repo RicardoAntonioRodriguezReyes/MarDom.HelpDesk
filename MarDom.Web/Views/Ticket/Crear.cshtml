@@ -2,38 +2,94 @@
 @{
     ViewBag.Title = "Crear";
 }
-
+@model  MarDom.Web.Models.RegisterViewModel
 @section Styles {
-
+@Styles.Render("~/plugins/sweetAlertStyles")
 <link href="~/Scripts/plugins/EasyAutocomplete-1.3.5/easy-autocomplete.min.css" rel="stylesheet" />
 }
 @section Scripts {
 <script src="~/Scripts/plugins/EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js"></script>
-
+@Scripts.Render("~/plugins/sweetAlert")
 }
+
+
+
+     
+                <div class="modal inmodal" id="modalCrearCliente" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content animated fadeIn">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <i class="fa fa-clock-o modal-icon"></i>
+                                <h4 class="modal-title">Crear nuevo usuario</h4>
+                              
+                            </div>
+                            <div class="modal-body">
+                                @using (Html.BeginForm("Register","Account", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(t => t.Nombres, new { @class = "form-control", @placeholder = "Nombre" })
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(t => t.Apellidos, new { @class = "form-control", @placeholder = "Apellidos" })
+
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(t => t.UserName, new { @class = "form-control", @placeholder = "Nombre de usuario" })
+
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(t => t.Email, new { @class = "form-control", @placeholder = "Correo", @type = "email" })
+
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(t => t.Password, new { @class = "form-control", @placeholder = "Password", @type = "password" })
+
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(t => t.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirmar Password", @type = "password" })
+
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>
+
+                                }
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
 <div class="ibox float-e-margins" ng-controller="TicketController">
     <div class="ibox-content">
-        <button class="btn btn-primary pull-right" type="submit">Nuevo Cliente</button>
+        <button type="button" class="btn btn-primary pull-rigth" data-toggle="modal" data-target="#modalCrearCliente">Nuevo Cliente</button>
         <div class="form-group">           
             <input id="NombreBuscarUsuario" class="form-control"  placeholder="Introduccir nombre de usuario "/>
+           
         </div>                          
     </div>
-</div>
 <div class="ibox-content">
-    <form method="get" class="form-horizontal">
+    <div class="form-horizontal">
         <div class="form-group">
             <label class="col-sm-2 control-label">Registro para : </label>
 
-            <div class="col-sm-10"><input type="text" class="form-control" disabled="disabled"></div>
+            <div class="col-sm-10"><input type="text" class="form-control" disabled="disabled" ng-model="NombreUsuario" id="NombreUsuario"></div>
         </div>
         <div class="hr-line-dashed"></div>
-        <div class="form-group">
+        @*<div class="form-group">
             <label class="col-sm-2 control-label">Organizacion</label>
             <div class="col-sm-10">
-                <input type="text" disabled="disabled" class="form-control" > 
+                <input type="text" disabled="disabled" class="form-control"  ng-model="EmpresaUsuario"> 
             </div>
-        </div>
+        </div>*@
      
         <div class="form-group">
             <label class="col-sm-2 control-label">Tipo de solicitud</label>
@@ -92,11 +148,12 @@
         <div class="hr-line-dashed"></div>
         <div class="form-group">
             <div class="col-sm-4 col-sm-offset-2">
-                <button class="btn btn-white" type="submit">Cancelar</button>
-                <button class="btn btn-primary" type="submit">Crear</button>
+                <button class="btn btn-white" type="button">Cancelar</button>
+                <button class="btn btn-primary" type="button" ng-click="guardarTicket()">Crear</button>
             </div>
         </div>
-        </form>
+ </div>
             </div>
 
     
+    </div>

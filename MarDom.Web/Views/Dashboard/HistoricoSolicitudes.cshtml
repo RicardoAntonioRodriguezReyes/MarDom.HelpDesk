@@ -13,8 +13,15 @@
 
 <div ng-controller="DashboardController">
     {{Nombre}}
-    <canvas id="bar" class="chart chart-bar"
-            chart-data="data" chart-labels="labels" chart-series="series"></canvas>
+    <div class="body-content">
+        <canvas id="pie" class="chart chart-pie"
+                chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colors"></canvas> 
+
+        <canvas id="base" class="chart-bar"
+                chart-data="data2" chart-labels="labels2" chart-colors="colors"
+                chart-dataset-override="datasetOverride"></canvas>
+    </div>
+   
 
 </div>
 
