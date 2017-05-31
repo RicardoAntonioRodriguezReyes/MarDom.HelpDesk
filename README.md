@@ -60,6 +60,8 @@ base.uow.Repositorio<Usuario>().GetAll().ToList();
 Donde uow es la unidad de trabajo donde se le pasa la entidad y se ejecuta un método genérico para obtener todos los usuarios
  
 Aquí hay un ejemplo del código del procedimiento que crea el repositorio con Dynamic
+
+
 public RepositorioBase<T> Repositorio<T>() where T : class
         {
             if (repositories == null)
@@ -80,6 +82,8 @@ public RepositorioBase<T> Repositorio<T>() where T : class
             }
             return (RepositorioBase<T>)repositories[type];
         }
+        
+        
  
 #### MarDom.Service
 En este proyecto está la capa de servicio de la aplicación que solo se encarga de devolver los datos de la capa de datos o la notificación de que si hubo un error o no
