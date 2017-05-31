@@ -59,7 +59,7 @@ es donde se crea de manera dinámica usando Dynamic y Reflection una instancia d
 base.uow.Repositorio<Usuario>().GetAll().ToList();
 Donde uow es la unidad de trabajo donde se le pasa la entidad y se ejecuta un método genérico para obtener todos los usuarios
  
-Aquí hay un ejemplo del código del procedimiento que crea el repositorio con Dynamic
+Aquí hay un ejemplo del código del procedimiento que crea el repositorio con Dynamic:
 
 
          public RepositorioBase<T> Repositorio<T>() where T : class
