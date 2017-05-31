@@ -95,7 +95,7 @@ En este proyecto está el sitio web basado en MVC 5 , angular y los demás frame
 #### Estructura de base de datos:
 
 Esta es la estructura de tablas pensadas para el proyecto con lo que tiene que ver creación de solicitudes:
-
+![base de datos](https://cloud.githubusercontent.com/assets/11558655/26648421/6e4c419c-4610-11e7-91e2-815034e1d758.png)
 
 
  
