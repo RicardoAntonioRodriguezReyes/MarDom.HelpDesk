@@ -62,7 +62,7 @@ Donde uow es la unidad de trabajo donde se le pasa la entidad y se ejecuta un m�
 Aquí hay un ejemplo del código del procedimiento que crea el repositorio con Dynamic
 
 
-public RepositorioBase<T> Repositorio<T>() where T : class
+         public RepositorioBase<T> Repositorio<T>() where T : class
         {
             if (repositories == null)
             {
@@ -88,11 +88,15 @@ public RepositorioBase<T> Repositorio<T>() where T : class
 #### MarDom.Service
 En este proyecto está la capa de servicio de la aplicación que solo se encarga de devolver los datos de la capa de datos o la notificación de que si hubo un error o no
  
-MarDom.Web
+#### MarDom.Web
 En este proyecto está el sitio web basado en MVC 5 , angular y los demás framework para que sea de fácil uso para el usuario
- 
- 
- Esta es la estructura de tablas pensadas para el proyecto con lo que tiene que ver creación de solicitudes:
+
+
+#### Estructura de base de datos:
+
+Esta es la estructura de tablas pensadas para el proyecto con lo que tiene que ver creación de solicitudes:
+
+
 
  
  El flujo que pensé fue el siguiente: Un usuario hace una solicitud al departamento de tecnología el agente que es un usuario es el que se encarga de capturar lo solicitado por el usuario, este asigna el departamento y el área a la que corresponde la solicitud. Un ticket tiene una sección en el sistema que corresponde a la clasificación de la solicitud, por ejemplo: Software y Hardware son secciones de una solicitud , las categorías están relacionadas con la sección y los problemas relacionados a las categorías por ejemplo : Sección Software en la categoría Microsoft Outlook se selecciona el ProblemaId  error al enviar correo electrónico así se puede llevar una estadística de cuáles son los problemas más frecuentes de una categoría.    
