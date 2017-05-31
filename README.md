@@ -52,6 +52,8 @@ Tomando en cuenta los puntos que iban hacer evaluados para el proyecto que son: 
 - MarDom.Web
 - MarDom.Data
 
+#### MarDom.Data
+
 En este proyecto está la capa de datos su responsabilidad es realizar todas las consultas necesarias a la base de Datos. Aquí se encuentra el contexto de la base de datos y el conjunto de entidades que representan cada uno de los objetos de la base de datos. También hay una clase llamada “ProcedureContext” que se creó para utilizar linq to sql para mapear y ejecutar los procedimientos. La clase RepositorioBase es donde se encuentran los procedimientos para hacer select , insert , delete de manera genérica para cualquier entidad del proyecto y la clase UnitOfWork
 es donde se crea de manera dinámica usando Dynamic y Reflection una instancia del objeto que llegue en ese momento y asi podar adaptar el repositorio genérico a la entidad que se le pase en el momento un ejemplo de implementación seria:
 base.uow.Repositorio<Usuario>().GetAll().ToList();
@@ -79,7 +81,7 @@ public RepositorioBase<T> Repositorio<T>() where T : class
             return (RepositorioBase<T>)repositories[type];
         }
  
-MarDom.Service
+#### MarDom.Service
 En este proyecto está la capa de servicio de la aplicación que solo se encarga de devolver los datos de la capa de datos o la notificación de que si hubo un error o no
  
 MarDom.Web
